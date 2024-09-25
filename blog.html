@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog part</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/642d5aa5ee.js" crossorigin="anonymous"></script>
+
+    <style>
+        .font{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body class="font">
+    
+    
+    <section class="bg-purple-100 h-24"> 
+        <div class=" flex justify-around p-4">
+           
+          
+                <div>
+                    <a class="btn bg-lime-400 hover:bg-lime-400" href="index.html">Home</a>
+                </div>
+    
+                <div class="flex">
+                    <img class="w-5 h-5" src="assets/logo.png">
+                    <a href="">Bangladesh</a>
+                </div>
+    
+                <div class="flex">
+                    <img class="w-5 h-5" src="assets/coin.png">
+                   <a href="">5500 BDT</a>
+                </div>
+          
+           
+               
+         </div>
+
+       
+
+    </section>
+    <h1 class="ml-32  text-4xl font-extrabold mt-8">Important FQA ? </h1>
+
+
+    
+    <!-- For Q/A -->
+    <section class="ml-32 w-3/4 mt-8">
+           
+        <!-- Question-2 -->
+         <div>
+
+           <div id="comment-container1" class="collapse collapse-arrow bg-base-200 mt-5">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+            <div class="collapse-content collapse-arrow bg-base-200 ">
+            <textarea name="" id="comment-box1" cols="60" rows="2"></textarea>
+            <button id="btn-post1" class="btn btn-xs">post</button>
+            
+        
+            </div>
+ 
+         
+        </div>
+ 
+               <!-- Question-2 -->
+            <div id="comment-container" class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">How do you select a el4ement from DOM?</div>
+                <div class="collapse-content">
+                    <textarea name="" id="comment-box2" cols="60" rows="2"></textarea>
+                    <button id="btn-post" class="btn btn-xs">post</button>
+                </div>
+             </div>
+                 
+                 <!-- Question-2 -->
+                <div id="comment-container3" class="collapse collapse-arrow bg-base-200 mt-5">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the event delegation from the context of DOM,and why is it useful?</div>
+                    <div class="collapse-content">
+                        <textarea name="" id="comment-box3" cols="60" rows="2"></textarea>
+                         <button id="btn-post3" class="btn btn-xs">post</button>
+                    </div>
+                 </div>
+ 
+                 <div  id="comment-container4" class="collapse collapse-arrow bg-base-200 mt-5">
+                     <input type="radio" name="my-accordion-2" checked="checked" />
+                     <div class="collapse-title text-xl font-medium">How do you menifulate an element attribute and style using DOM?</div>
+                     <div class="collapse-content">
+                        <textarea name="" id="comment-box4" cols="60" rows="2"></textarea>
+                        <button id="btn-post4" class="btn btn-xs">post</button>
+                     </div>
+                  </div>
+
+         </div>
+       
+
+   </section>
+
+   <script>
+    document.getElementById('btn-post')
+      .addEventListener('click',function(event){
+        event.preventDefault();
+        //console.log('add this') ;
+        const commentBox = document.getElementById('comment-box2') ;
+        const newcomment = commentBox.value ;
+       // console.log(newcomment) ;
+
+       const commentContainer = document.getElementById('comment-container');
+       const p = document.createElement('p') ;
+       p.innerText = newcomment ;
+       commentContainer.appendChild(p) ;
+       commentBox.value = '' ;
+      })
+   </script>
+
+   <script>
+        document.getElementById('btn-post1')
+      .addEventListener('click',function(event){
+        event.preventDefault();
+        //console.log('add this') ;
+        const commentBox1 = document.getElementById('comment-box1') ;
+        const newcomment1 = commentBox1.value ;
+       // console.log(newcomment) ;
+
+       const commentContainer1 = document.getElementById('comment-container1');
+       const p = document.createElement('p') ;
+       p.innerText = newcomment1 ;
+       commentContainer1.appendChild(p) ;
+       commentBox1.value = '' ;
+      })
+   </script>
+
+   <script>
+            document.getElementById('btn-post3')
+      .addEventListener('click',function(event){
+        event.preventDefault();
+        //console.log('add this') ;
+        const commentBox3 = document.getElementById('comment-box3') ;
+        const newcomment3 = commentBox3.value ;
+       // console.log(newcomment) ;
+
+       const commentContainer3 = document.getElementById('comment-container3');
+       const p = document.createElement('p') ;
+       p.innerText = newcomment3 ;
+       commentContainer3.appendChild(p) ;
+       commentBox3.value = '' ;
+      })
+   </script>
+
+   <script>
+             document.getElementById('btn-post4')
+      .addEventListener('click',function(event){
+        event.preventDefault();
+        //console.log('add this') ;
+        const commentBox4 = document.getElementById('comment-box4') ;
+        const newcomment4 = commentBox4.value ;
+       // console.log(newcomment) ;
+
+       const commentContainer4 = document.getElementById('comment-container4');
+       const p = document.createElement('p') ;
+       p.innerText = newcomment4 ;
+       commentContainer4.appendChild(p) ;
+       commentBox4.value = '' ;
+      })
+   </script>
+</body>
+</html>
