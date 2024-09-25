@@ -53,123 +53,78 @@
     
     <!-- For Q/A -->
     <section class="ml-32 w-3/4 mt-8">
-           
-        <!-- Question-2 -->
-         <div>
 
-           <div id="comment-container1" class="collapse collapse-arrow bg-base-200 mt-5">
+        <div class="collapse collapse-arrow bg-base-200 mt-5">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
-            <div class="collapse-content collapse-arrow bg-base-200 ">
-            <textarea name="" id="comment-box1" cols="60" rows="2"></textarea>
-            <button id="btn-post1" class="btn btn-xs">post</button>
-            
-        
+            <div class="collapse-content">
+              <p> Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts 
+                to dynamically access and update the content,</p>
             </div>
- 
-         
-        </div>
+         </div>
  
                <!-- Question-2 -->
-            <div id="comment-container" class="collapse collapse-arrow bg-base-200 mt-5">
+
+               <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">How do you select a element from DOM?</div>
+                <div class="collapse-content">
+                  <p>Use an ID to Select an Element with .getElementById().
+                    Use a CSS Selector to Select an Element with .querySelector().
+                    Use a CSS Selector to Select Multiple Elements with .querySelectorAll().</p>
+                </div>
+             </div>
+           <!-- <div id="comment-container" class="collapse collapse-arrow bg-base-200 mt-5">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">How do you select a el4ement from DOM?</div>
                 <div class="collapse-content">
                     <textarea name="" id="comment-box2" cols="60" rows="2"></textarea>
                     <button id="btn-post" class="btn btn-xs">post</button>
                 </div>
+             </div>   --> 
+
+             <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the event delegation from the context of DOM,and why is it useful?</div>
+                <div class="collapse-content">
+                  <p> an event-handling pattern that allows you to handle events at a higher level in the DOM tree other 
+                    than the level where the event was first received</p>
+                </div>
              </div>
+
                  
                  <!-- Question-2 -->
-                <div id="comment-container3" class="collapse collapse-arrow bg-base-200 mt-5">
+               <!--  <div id="comment-container3" class="collapse collapse-arrow bg-base-200 mt-5">
                     <input type="radio" name="my-accordion-2" checked="checked" />
                     <div class="collapse-title text-xl font-medium">What is the event delegation from the context of DOM,and why is it useful?</div>
                     <div class="collapse-content">
                         <textarea name="" id="comment-box3" cols="60" rows="2"></textarea>
                          <button id="btn-post3" class="btn btn-xs">post</button>
                     </div>
+                 </div>  --> 
+
+
+                 <div class="collapse collapse-arrow bg-base-200 mt-5">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">How do you menifulate an element attribute and style using DOM?</div>
+                    <div class="collapse-content">
+                      <p> The setAttribute() method sets a new value to an attribute. If the attribute does not exist, it is created first.</p>
+                    </div>
                  </div>
  
-                 <div  id="comment-container4" class="collapse collapse-arrow bg-base-200 mt-5">
+               <!-- <div  id="comment-container4" class="collapse collapse-arrow bg-base-200 mt-5">
                      <input type="radio" name="my-accordion-2" checked="checked" />
                      <div class="collapse-title text-xl font-medium">How do you menifulate an element attribute and style using DOM?</div>
                      <div class="collapse-content">
                         <textarea name="" id="comment-box4" cols="60" rows="2"></textarea>
                         <button id="btn-post4" class="btn btn-xs">post</button>
                      </div>
-                  </div>
+                  </div>  -->  
 
          </div>
        
 
    </section>
 
-   <script>
-    document.getElementById('btn-post')
-      .addEventListener('click',function(event){
-        event.preventDefault();
-        //console.log('add this') ;
-        const commentBox = document.getElementById('comment-box2') ;
-        const newcomment = commentBox.value ;
-       // console.log(newcomment) ;
-
-       const commentContainer = document.getElementById('comment-container');
-       const p = document.createElement('p') ;
-       p.innerText = newcomment ;
-       commentContainer.appendChild(p) ;
-       commentBox.value = '' ;
-      })
-   </script>
-
-   <script>
-        document.getElementById('btn-post1')
-      .addEventListener('click',function(event){
-        event.preventDefault();
-        //console.log('add this') ;
-        const commentBox1 = document.getElementById('comment-box1') ;
-        const newcomment1 = commentBox1.value ;
-       // console.log(newcomment) ;
-
-       const commentContainer1 = document.getElementById('comment-container1');
-       const p = document.createElement('p') ;
-       p.innerText = newcomment1 ;
-       commentContainer1.appendChild(p) ;
-       commentBox1.value = '' ;
-      })
-   </script>
-
-   <script>
-            document.getElementById('btn-post3')
-      .addEventListener('click',function(event){
-        event.preventDefault();
-        //console.log('add this') ;
-        const commentBox3 = document.getElementById('comment-box3') ;
-        const newcomment3 = commentBox3.value ;
-       // console.log(newcomment) ;
-
-       const commentContainer3 = document.getElementById('comment-container3');
-       const p = document.createElement('p') ;
-       p.innerText = newcomment3 ;
-       commentContainer3.appendChild(p) ;
-       commentBox3.value = '' ;
-      })
-   </script>
-
-   <script>
-             document.getElementById('btn-post4')
-      .addEventListener('click',function(event){
-        event.preventDefault();
-        //console.log('add this') ;
-        const commentBox4 = document.getElementById('comment-box4') ;
-        const newcomment4 = commentBox4.value ;
-       // console.log(newcomment) ;
-
-       const commentContainer4 = document.getElementById('comment-container4');
-       const p = document.createElement('p') ;
-       p.innerText = newcomment4 ;
-       commentContainer4.appendChild(p) ;
-       commentBox4.value = '' ;
-      })
-   </script>
 </body>
 </html>
